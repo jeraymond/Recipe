@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Advanced Topics" link_to="toc.xml#advancedtopics"> 
+	<topic label="Printing a Recipe"  href="html/advancedtopics/printingarecipe.html" /> 
+	<topic label="Exporting Recipes"  href="html/advancedtopics/exportingrecipes.html" /> 
+	<topic label="Changing the Recipes File Location"  href="html/advancedtopics/changingrecipefilelocation.html" /> 
+</toc>

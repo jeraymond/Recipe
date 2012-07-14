@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Getting Started" link_to="toc.xml#gettingstarted"> 
+	<topic label="Definitions" href="html/gettingstarted/definitions.html" />
+	<topic label="Creating a New Recipe"  href="html/gettingstarted/creatingarecipe.html" /> 
+	<topic label="Opening a Recipe"  href="html/gettingstarted/openarecipe.html" /> 
+	<topic label="Editing a Recipe"  href="html/gettingstarted/editarecipe.html" /> 
+	<topic label="Deleting a Recipe"  href="html/gettingstarted/deletearecipe.html" /> 
+</toc>

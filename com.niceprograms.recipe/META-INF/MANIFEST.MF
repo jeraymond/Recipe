@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Recipe
+Bundle-SymbolicName: com.niceprograms.recipe; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: NicePrograms.com
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ net.sf.paperclips,
+ net.sf.paperclips.ui,
+ com.niceprograms.jface,
+ com.niceprograms.utilities,
+ org.eclipse.help
+Eclipse-LazyStart: true
+Bundle-Activator: com.niceprograms.recipe.RecipeActivator

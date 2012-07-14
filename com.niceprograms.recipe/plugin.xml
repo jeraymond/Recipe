@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <wizard
+            class="com.niceprograms.recipe.ui.wizards.ImportRecipesWizard"
+            icon="icons/tomato_16.gif"
+            id="com.niceprograms.recipe.wizards.import"
+            name="Recipe Import Wizard">
+         <description> 
+            Imports recipes into the recipe book.
+         </description> 
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            class="com.niceprograms.recipe.ui.wizards.ExportRecipesWizard"
+            icon="icons/tomato_16.gif"
+            id="com.niceprograms.recipe.wizards.export"
+            name="Recipe Export Wizard"/>
+   </extension>
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.niceprograms.recipe.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.niceprograms.recipe.perspectives.Perspective"
+            icon="icons/generic_element.gif"
+            id="com.niceprograms.recipe.perspectives.perspective"
+            name="Recipe Perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.niceprograms.recipe.views.RecipesView"
+            icon="icons/generic_element.gif"
+            id="com.niceprograms.recipe.views.recipes"
+            name="Recipies"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.niceprograms.recipe.editors.RecipeEditor"
+            default="false"
+            icon="icons/file_16.gif"
+            id="com.niceprograms.recipe.editors.recipeeditor"
+            name="Recipe Editor"/>
+      <editor
+            class="com.niceprograms.recipe.editors.ViewRecipeEditor"
+            contributorClass="com.niceprograms.recipe.editors.ViewRecipeEditorContributor"
+            default="false"
+            icon="icons/tomato_16.gif"
+            id="com.niceprograms.recipe.editors.readonlyrecipeeditor"
+            name="Read Only Recipe Editor"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Creates a new recipe"
+            id="com.niceprograms.recipe.commands.newrecipe"
+            name="New Recipe"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.niceprograms.recipe.commands.newrecipe"
+            contextId="com.niceprograms.recipe.context"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+N"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.contexts">
+      <context
+            id="com.niceprograms.recipe.context"
+            name="Default Recipe Context"
+            parentId="org.eclipse.ui.contexts.window"/>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.niceprograms.recipe.application"
+            name="Recipe">
+         <property
+               name="windowImages"
+               value="icons/tomato_16.gif,icons/alt_window_32.gif"/>
+         <property
+               name="aboutText"
+               value="%aboutText"/>
+         <property
+               name="aboutImage"
+               value="images/tomato_help.gif"/>
+         <property
+               name="preferenceCustomization"
+               value="preferences.ini"/>
+         <property
+               name="appName"
+               value="Recipe">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.niceprograms.recipe.preferences.GeneralPreferencesPage"
+            id="com.niceprograms.recipe.preferences.general"
+            name="General"/>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc.xml"
+            primary="true"/>
+      <toc file="tocgettingstarted.xml"/>
+      <toc file="advancedtopics.xml"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="com.niceprograms.recipe.intro.RecipeIntro"
+            icon="icons/tomato_16.gif"
+            id="com.niceprograms.recipe.intro.recipeintro"
+            label="Recipe Introduction"/>
+      <introProductBinding
+            introId="com.niceprograms.recipe.intro.recipeintro"
+            productId="com.niceprograms.recipe.product.disabled"/>
+   </extension>
+</plugin>
